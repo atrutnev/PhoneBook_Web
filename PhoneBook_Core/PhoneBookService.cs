@@ -71,8 +71,8 @@ namespace PhoneBook_Core
                     //Если введены цифры, то поиск производится по номеру абонента.
                     else if (char.IsDigit(c))
                     {
-                        var number = int.Parse(s);
-                        var q = db.People.Where(a => a.phoneNumber.Equals(number)).Include("Category").Include("City");
+                        //var number = int.Parse(s);
+                        var q = db.People.Where(a => a.phoneNumber.Contains(s)).Include("Category").Include("City");
                         return q;
                     }
                     else

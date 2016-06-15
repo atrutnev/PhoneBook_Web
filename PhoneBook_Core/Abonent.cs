@@ -12,7 +12,7 @@ namespace PhoneBook_Core
 
         public string Name { get; set; }
 
-        public int phoneNumber { get; set; }
+        public string phoneNumber { get; set; }
 
         public Category Category { get; set; }
 
