@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 
-namespace PhoneBook_Core
+namespace PhoneBook_WebInterface.Models
 {
-    public class City
+    public class CityView
     {
         public int Id { get; set; }
 
@@ -12,7 +15,5 @@ namespace PhoneBook_Core
         [MinLength(3, ErrorMessage = "Наименование должно быть больше трех символов")]
         [RegularExpression("[а-яА-Яa-zA-Z-\\.]+", ErrorMessage = "В названии города допустимы только символы латинского и русского алфавитов, а также знаки \"-\" и \".\"")]
         public string Name { get; set; }
-
-        public ICollection<Abonent> People { get; set; }
     }
 }

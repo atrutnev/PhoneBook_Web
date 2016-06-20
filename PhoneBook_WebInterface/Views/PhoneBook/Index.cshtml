@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<PhoneBook_WebInterface.Models.AbonentView>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Главная страница";
 }
 
-<h2>A list of abonents</h2>
+<h2>Список контактов</h2>
 
 <p>
-    @Html.ActionLink("Add New Abonent", "Create")
+    @Html.ActionLink("Добавить запись", "Create")
 </p>
 <table class="table">
     <tr>
@@ -42,9 +42,9 @@
         </td>
 		
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Подробно", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

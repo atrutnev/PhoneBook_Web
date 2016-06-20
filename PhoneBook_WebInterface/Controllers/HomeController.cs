@@ -15,14 +15,14 @@ namespace PhoneBook_WebInterface.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Obucharium, 2016.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            //ViewBag.Message = "Сведения";
 
             return View();
         }

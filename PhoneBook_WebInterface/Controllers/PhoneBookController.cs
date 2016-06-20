@@ -44,7 +44,6 @@ namespace PhoneBook_WebInterface.Controllers
                     service.AddAbonent(new Abonent { Name = abonentView.Name, phoneNumber = abonentView.phoneNumber, Category = abonentView.Category, City = abonentView.City});
                     return RedirectToAction("Index");
                 }
-                // TODO: Add insert logic here
 
                 return View();
             }
