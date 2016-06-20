@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBook_Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +14,8 @@ namespace PhoneBook_WebInterface.Models
         [Required]
         [Display(Name = "Город")]
         [MinLength(3, ErrorMessage = "Наименование должно быть больше трех символов")]
-        [RegularExpression("[а-яА-Яa-zA-Z-\\.]+", ErrorMessage = "В названии города допустимы только символы латинского и русского алфавитов, а также знаки \"-\" и \".\"")]
+        [RegularExpression("[а-яА-Яa-zA-Z-\\.\\s]+", ErrorMessage = "В названии города допустимы только символы латинского и русского алфавитов, а также знаки \"-\", \".\" и пробел")]
         public string Name { get; set; }
+
     }
 }

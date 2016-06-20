@@ -18,8 +18,8 @@ namespace PhoneBook_WebInterface.Controllers
                 .Select(c => new CategoryView
                 {
                     Id = c.Id,
-                    Name = c.Name
-                }).OrderBy(c => c.Name));
+                    Name = c.Name,
+                }).GroupBy(c => c.Name).Select(c => c.First()).OrderBy(c => c.Name));
         }
 
         // GET: Category/Create

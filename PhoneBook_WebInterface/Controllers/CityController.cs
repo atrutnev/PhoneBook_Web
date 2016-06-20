@@ -19,14 +19,8 @@ namespace PhoneBook_WebInterface.Controllers
                 {
                     Id = c.Id,
                     Name = c.Name
-                }).OrderBy(c => c.Name));
+                }).GroupBy(c => c.Name).Select(c => c.First()).OrderBy(c => c.Name));
         }
-
-        // GET: City/Details/5
-        //public ActionResult Details(int id)
-        //{
-        //    return View();
-        //}
 
         // GET: City/Create
         public ActionResult Create()

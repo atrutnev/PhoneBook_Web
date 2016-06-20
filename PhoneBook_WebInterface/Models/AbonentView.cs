@@ -13,7 +13,7 @@ namespace PhoneBook_WebInterface.Models
 
         [Required(ErrorMessage = "Имя не может быть пустым")]
         [Display(Name = "Имя абонента")]
-        [RegularExpression("[а-яА-Яa-zA-Z-\\.]+", ErrorMessage = "В имени абонента допустимы только символы латинского и русского алфавитов, а также знаки \"-\" и \".\"")]
+        [RegularExpression("[а-яА-Яa-zA-Z-\\.]+", ErrorMessage = "В имени абонента допустимы только символы латинского и русского алфавитов, а также знаки \"-\", \".\" и пробел")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Номер телефона не может быть пустым")]

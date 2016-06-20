@@ -10,7 +10,7 @@ namespace PhoneBook_Core
         [Required]
         [Display(Name = "Город")]
         [MinLength(3, ErrorMessage = "Наименование должно быть больше трех символов")]
-        [RegularExpression("[а-яА-Яa-zA-Z-\\.]+", ErrorMessage = "В названии города допустимы только символы латинского и русского алфавитов, а также знаки \"-\" и \".\"")]
+        [RegularExpression("[а-яА-Яa-zA-Z-\\.\\s]+", ErrorMessage = "В названии города допустимы только символы латинского и русского алфавитов, а также знаки \"-\", \".\" и пробел")]
         public string Name { get; set; }
 
         public ICollection<Abonent> People { get; set; }

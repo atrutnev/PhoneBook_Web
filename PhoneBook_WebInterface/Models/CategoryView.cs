@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBook_Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace PhoneBook_WebInterface.Models
         [MinLength(3, ErrorMessage = "Наименование должно быть больше трех символов")]
         [RegularExpression("[а-яА-Яa-zA-Z]+", ErrorMessage = "В имени группы допустимы только символы латинского и русского алфавитов")]
         public string Name { get; set; }
+
     }
 }
