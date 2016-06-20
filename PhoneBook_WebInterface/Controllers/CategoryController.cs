@@ -19,16 +19,8 @@ namespace PhoneBook_WebInterface.Controllers
                 {
                     Id = c.Id,
                     Name = c.Name
-                }));
+                }).OrderBy(c => c.Name));
         }
-
-        // GET: Category/Details/5
-        //public ActionResult Details(int id)
-        //{
-        //    var service = new PhoneBookService();
-        //    var category = service.GetCategory(id);
-        //    return View(new CategoryView { Name = category.Name});
-        //}
 
         // GET: Category/Create
         public ActionResult Create()

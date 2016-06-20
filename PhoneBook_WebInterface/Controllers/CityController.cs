@@ -19,7 +19,7 @@ namespace PhoneBook_WebInterface.Controllers
                 {
                     Id = c.Id,
                     Name = c.Name
-                }));
+                }).OrderBy(c => c.Name));
         }
 
         // GET: City/Details/5

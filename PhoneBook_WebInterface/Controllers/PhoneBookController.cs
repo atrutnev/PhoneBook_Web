@@ -15,7 +15,7 @@ namespace PhoneBook_WebInterface.Controllers
         {
             var service = new PhoneBookService();
             return View(service.GetPeople()
-                        .Select(a => new AbonentView { Name = a.Name, phoneNumber = a.phoneNumber, Id = a.Id, Category = a.Category, City = a.City }));
+                        .Select(a => new AbonentView { Name = a.Name, phoneNumber = a.phoneNumber, Id = a.Id, Category = a.Category, City = a.City }).OrderBy(a => a.Name));
         }
 
         // GET: PhoneBook/Details/5
