@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,10 @@ namespace PhoneBook_Core
     {
         public int Id { get; set; }
 
+        [Display(Name = "Имя абонента")]
         public string Name { get; set; }
 
+        [Display(Name = "Номер телефона")]
         public string phoneNumber { get; set; }
 
         public Category Category { get; set; }

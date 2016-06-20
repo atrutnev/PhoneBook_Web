@@ -18,10 +18,11 @@ namespace PhoneBook_WebInterface.Controllers
                 .Select(c => new CityView
                 {
                     Id = c.Id,
-                    Name = c.Name
-                }).GroupBy(c => c.Name).Select(c => c.First()).OrderBy(c => c.Name));
+                    Name = c.Name,
+                    Abonent = c.People.SingleOrDefault()
+                }).OrderBy(c => c.Name));
         }
-
+        //.GroupBy(c => c.Name).Select(c => c.First())
         // GET: City/Create
         public ActionResult Create()
         {

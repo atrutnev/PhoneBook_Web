@@ -17,5 +17,7 @@ namespace PhoneBook_WebInterface.Models
         [RegularExpression("[а-яА-Яa-zA-Z-\\.\\s]+", ErrorMessage = "В названии города допустимы только символы латинского и русского алфавитов, а также знаки \"-\", \".\" и пробел")]
         public string Name { get; set; }
 
+        [Display(Name = "Абонент")]
+        public Abonent Abonent { get; set; }
     }
 }

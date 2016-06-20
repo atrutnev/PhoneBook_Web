@@ -14,6 +14,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
+		<th>
+            @Html.DisplayNameFor(model => model.Abonent.Name)
+        </th>
+		<th>
+            @Html.DisplayNameFor(model => model.Abonent.phoneNumber)
+        </th>
         <th></th>
     </tr>
 
@@ -21,6 +27,12 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
+        </td>
+		<td>
+            @Html.DisplayFor(modelItem => item.Abonent.Name)
+        </td>
+		<td>
+            @Html.DisplayFor(modelItem => item.Abonent.phoneNumber)
         </td>
         <td>
             @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |

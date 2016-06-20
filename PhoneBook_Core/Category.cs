@@ -7,7 +7,6 @@ namespace PhoneBook_Core
     {
         public int Id { get; set; }
 
-
         [Required]
         [Display(Name = "Группа")]
         [MinLength(3, ErrorMessage = "Наименование должно быть больше трех символов")]

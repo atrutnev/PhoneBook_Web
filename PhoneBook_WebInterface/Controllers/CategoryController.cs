@@ -19,7 +19,8 @@ namespace PhoneBook_WebInterface.Controllers
                 {
                     Id = c.Id,
                     Name = c.Name,
-                }).GroupBy(c => c.Name).Select(c => c.First()).OrderBy(c => c.Name));
+                    Abonent = c.People.SingleOrDefault()
+                }).OrderBy(c => c.Name));
         }
 
         // GET: Category/Create

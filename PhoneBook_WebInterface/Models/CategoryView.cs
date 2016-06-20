@@ -17,5 +17,7 @@ namespace PhoneBook_WebInterface.Models
         [RegularExpression("[а-яА-Яa-zA-Z]+", ErrorMessage = "В имени группы допустимы только символы латинского и русского алфавитов")]
         public string Name { get; set; }
 
+        [Display(Name = "Абонент")]
+        public Abonent Abonent { get; set; }
     }
 }
