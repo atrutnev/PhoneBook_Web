@@ -6,9 +6,19 @@
 
 <h2>Список контактов</h2>
 
+
 <p>
+	
     @Html.ActionLink("Добавить запись", "Create")
+	
+	@using (Html.BeginForm()) 
+{ 
+    <p> 
+        Поиск по имени или номеру: @Html.TextBox("SearchString")   
+        <input type="submit" value="Поиск" /></p>
+}
 </p>
+	
 <table class="table">
     <tr>
         <th>

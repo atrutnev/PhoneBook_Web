@@ -11,9 +11,14 @@ namespace PhoneBook_WebInterface.Controllers
     public class PhoneBookController : Controller
     {
         // GET: PhoneBook
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var service = new PhoneBookService();
+            
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                return View(service.SearchAbonent(searchString).Select(a => new AbonentView { Name = a.Name, phoneNumber = a.phoneNumber, Id = a.Id, Category = a.Category, City = a.City }).OrderBy(a => a.Name));
+            }
             return View(service.GetPeople()
                         .Select(a => new AbonentView { Name = a.Name, phoneNumber = a.phoneNumber, Id = a.Id, Category = a.Category, City = a.City }).OrderBy(a => a.Name));
         }
@@ -79,7 +84,7 @@ namespace PhoneBook_WebInterface.Controllers
                     var service = new PhoneBookService();
                     service.ModifyAbonent(
                         id,
-                        new Abonent { Name = abonentView.Name, phoneNumber = abonentView.phoneNumber, Category = abonentView.Category, City = abonentView.City });
+                        new Abonent { Name = abonentView.Name, phoneNumber = abonentView.phoneNumber, Category = abonentView.Category, City = abonentView.City }); 
                     return RedirectToAction("Index");
                 }
 
